@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average</title>
+</head>
+<body>
+    <script defer>
+        const n = parseInt(prompt("Enter number of values: "));
+
+        let sum =0;
+
+        for(let i=0; i<n; i++) {
+            const input = parseFloat(prompt("Enter number " + i + ":" ));
+            sum += input;
+        }
+        const average = sum/n;
+    
+        console.log(`Average of ${n} numbers is: ${average}`);
+    </script>
+</body>
+</html>

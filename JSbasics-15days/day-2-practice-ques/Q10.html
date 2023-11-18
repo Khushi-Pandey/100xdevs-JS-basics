@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest</title>
+</head>
+<body>
+    <script defer>
+        const P = parseFloat(prompt("Enter principal amount: "));
+        const R = parseFloat(prompt("Enter rate of interest: "));
+        const T = parseFloat(prompt("Enter number of years: "));
+
+        let SI = P * R * T / 100;
+
+        console.log(`Simple Interest: ${SI}`);
+    </script>
+</body>
+</html>

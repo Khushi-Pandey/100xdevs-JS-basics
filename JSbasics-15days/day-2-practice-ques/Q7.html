@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>distance b/w cities</title>
+</head>
+<body>
+    <script defer>
+        const dist = parseFloat(prompt("Enter distance b/w both cities in km: "));
+
+        let m = dist * 1000;
+        let ft = dist * 3280.84;
+        let inch = dist * 39370.1;
+        let cm = dist * 100000;
+    
+        console.log(`distance in meter: ${m}, feet: ${ft}, inches: ${inch}, centimeter: ${cm}`);
+    </script>
+</body>
+</html>

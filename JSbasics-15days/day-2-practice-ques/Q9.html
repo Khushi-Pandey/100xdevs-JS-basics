@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discounted and Discount amount</title>
+</head>
+<body>
+    <script defer>
+        const quantity = parseInt(prompt("Enter quantity of the product: "));
+        const rate = parseFloat(prompt("Enter rate of the product: "));
+
+        let amount = quantity * rate;
+        let discountAmt = 10*amount / 100;
+        let discountedAmt = amount - discountAmt;
+
+        console.log(`The amount of the product: ${amount}, discount amount: ${discountAmt}, and amount after discount: ${discountedAmt}`);
+    </script>
+</body>
+</html>
