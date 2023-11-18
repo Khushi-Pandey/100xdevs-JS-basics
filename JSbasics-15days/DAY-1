@@ -1,0 +1,4 @@
+# Rules for naming variables:
+- Variable name should start with letter or _ or $.
+- Variables are case sensitive, means 'a' is different from 'A'.
+- Variable names cannot contain spaces.
