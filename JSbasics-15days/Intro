@@ -1,3 +1,5 @@
+# JavaScript is a dynamic interpreted programming language.
+
 # Rules for naming variables:
 - Variable name should start with letter or _ or $.
 - Variables are case sensitive, means 'a' is different from 'A'.
