@@ -1,0 +1,24 @@
+# var vs let:
+var is function-scoped whereas let is block-scoped.
+
+A change to a var-declared variable will be visible throughout the entire function in which it is declared, regardless of whether the change is made inside of a conditional loop or not.
+example:
+function myFunction() {
+  var x = 1;
+  if (true) {
+    x = 2;
+  }
+  console.log(x); // Output: 2
+}
+
+As a general rule, it is recommended to use let instead of var for declaring variables in JavaScript, even if you are declaring them inside of conditional loops. This is because let-declared variables have a more predictable scope, which can help to avoid bugs.
+
+The value of the i variable is changed to 1 inside of the conditional loop. However, this change is not reflected in the global scope, so the value of i is still 0 when it is logged to the console.
+example:
+function myFunction() {
+  let i = 0;
+  if (true) {
+    i = 1;
+  }
+  console.log(i); // Output: 0
+}
