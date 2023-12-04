@@ -1,12 +1,34 @@
-Expression-
+# Expression-
 - A fragment of code that produces a value is called an expression.
 - Every value written literally is an expression. 
   for ex: 77; or 'Khushi'
 
-Operators in javascript:
+# Operators in javascript:
 
 ++a will print a+1
 -> first increments then prints
 
 a++ will print a
 -> first prints then increments
+
+== equal to
+=== equal value & type
+
+# Destructuring assignment:
+
+used to unpack values from an array (or properties from objects), into distinct variables
+
+//in Array-
+say we have 
+let arr = [3, 5, 8, 9, 4, 7];
+/* a = arr[0];
+   b = arr[1];
+instead of this */
+[a, b, c, ...rest] = arr;  // rest-> left elements will be as an array if we print this    console.log(a, b, c, rest);
+let's we want a to be 3 and want rest to start from 9
+so we can do [a, , b, ...rest] = arr;  now if we print arr it will give 3 8 [9,4,7]
+// in Object-
+const obj = {a:1, b:2}
+const {a, b} = obj
+this will help in concise code and easy access as now a,b are both properties & variables and . syntax don't have to be used to access the properties
+
