@@ -1,0 +1,12 @@
+Expression-
+- A fragment of code that produces a value is called an expression.
+- Every value written literally is an expression. 
+  for ex: 77; or 'Khushi'
+
+Operators in javascript:
+
+++a will print a+1
+-> first increments then prints
+
+a++ will print a
+-> first prints then increments
