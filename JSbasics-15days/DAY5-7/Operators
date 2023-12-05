@@ -14,7 +14,7 @@ a++ will print a
 == equal to
 === equal value & type
 
-# Destructuring assignment:
+# Destructuring syntax:
 
 used to unpack values from an array (or properties from objects), into distinct variables
 
@@ -32,3 +32,84 @@ const obj = {a:1, b:2}
 const {a, b} = obj
 this will help in concise code and easy access as now a,b are both properties & variables and . syntax don't have to be used to access the properties
 
+# Spread syntax:
+the spread operator (...) is a powerful and versatile feature that allows you to expand elements of an iterable (like an array or a string) or object into individual elements. 
+It provides a concise syntax for various operations, such as copying arrays, combining arrays, and spreading object properties.
+
+if we want to make object of an array
+let arr = [3, 5, 8]
+let obj = {...arr }
+console.log(obj)   // {0:3, 1:5, 2:8}
+
+1. Copying Arrays:
+const originalArray = [1, 2, 3];
+const copyArray = [...originalArray];
+
+console.log(copyArray); // [1, 2, 3]
+
+2. Concatenating Arrays:
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
+
+const combinedArray = [...array1, ...array2];
+
+console.log(combinedArray); // [1, 2, 3, 4, 5, 6]
+
+3. Spreading Array Elements as Function Arguments:
+const numbers = [1, 2, 3];
+
+function sum(a, b, c) {
+  return a + b + c;
+}
+
+const result = sum(...numbers);
+
+console.log(result); // 6
+
+4. Creating Object Copies or Merging Objects:
+const originalObject = { a: 1, b: 2 };
+const copyObject = { ...originalObject };
+
+console.log(copyObject); // { a: 1, b: 2 }
+
+// Merging objects
+const object1 = { a: 1, b: 2 };
+const object2 = { b: 3, c: 4 };
+
+const mergedObject = { ...object1, ...object2 };
+
+console.log(mergedObject); // { a: 1, b: 3, c: 4 }
+
+5. Rest Parameters in Function Definitions:
+Rest parameters in JavaScript allow you to represent an indefinite number of arguments as an array. 
+This makes it possible to handle varying numbers of arguments in a more flexible way within a function. 
+The rest parameter is indicated by three dots (...) followed by the parameter name, which gathers the remaining arguments into an array.
+
+function exampleFunction(...args) {
+  console.log(args);
+}
+
+exampleFunction(1, 2, 3); // [1, 2, 3]
+
+// another ex- 
+
+function sum(...numbers) {
+  let result = 0;
+  
+  for (let number of numbers) {
+    result += number;
+  }
+  
+  return result;
+}
+
+console.log(sum(1, 2, 3)); // Output: 6
+console.log(sum(4, 5, 6, 7)); // Output: 22
+
+6. few properties of an object can be changed:
+let obj2 = {name:"harry", company:"Company xyz", address:"XYZ"}
+console.log({...obj2, name:"John", company:"ABC"})  //changes value
+console.log({name:"John", company:"ABC", ...obj2})  // This will print the obj2 object without changingany values
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
